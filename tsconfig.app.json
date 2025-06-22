@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/backend",
+    "module": "CommonJS",
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".", // <-- ini tambahan
+    "paths": {
+      // <-- ini tambahan
+      "@features/*": ["src/features/*"],
+      "@app/*": ["src/app/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/components/layout/Sidebar/menu.config.tsx"],
+  "exclude": ["test", "**/*.spec.ts"]
+}
